@@ -1,4 +1,3 @@
-
 /*
  * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
  *
@@ -30,14 +29,27 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
  
+/**
+ * This example, like all Swing examples, exists in a package:
+ * in this case, the "start" package.
+ * If you are using an IDE, such as NetBeans, this should work 
+ * seamlessly.  If you are compiling and running the examples
+ * from the command-line, this may be confusing if you aren't
+ * used to using named packages.  In most cases,
+ * the quick and dirty solution is to delete or comment out
+ * the "package" line from all the source files and the code
+ * should work as expected.  For an explanation of how to
+ * use the Swing examples as-is from the command line, see
+ * http://docs.oracle.com/javase/javatutorials/tutorial/uiswing/start/compile.html#package
+ */
  
  
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+/*
+ * HelloWorldSwing.java requires no other files. 
+ */
+import javax.swing.*;        
  
-/* FrameDemo.java requires no other files. */
-public class FrameDemo {
+public class HelloWorldSwing {
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the
@@ -45,17 +57,16 @@ public class FrameDemo {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("FrameDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920, 1080);
+        JFrame myframe = new JFrame("HelloWorldSwing");
+        myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
-        JLabel emptyLabel = new JLabel("HELOOOOO HWADHHFADU");
-        emptyLabel.setPreferredSize(new Dimension(175, 100));
-        frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
+        //Add the ubiquitous "Hello World" label.
+        JLabel label = new JLabel("jesus is here");
+        myframe.getContentPane().add(label);
  
         //Display the window.
-        frame.pack();
-        frame.setVisible(true);
+        myframe.pack();
+        myframe.setVisible(true);
     }
  
     public static void main(String[] args) {
